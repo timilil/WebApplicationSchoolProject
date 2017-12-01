@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Add images</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="newcss1.css" type="text/css">
+        
+    </head>
+    
+    <body>
+        <header>
+            <div class="box">
+                <h1><a href="main.html" style="text-decoration:none">Images</a></h1>
+                <nav>
+                <a class="first" href="newestpics.html" style="text-decoration:none">Newest pics</a>
+                <a href="mostliked.html" style="text-decoration:none">Most liked</a>
+                <a class="chosen" href="addimages.html" style="text-decoration:none">Add images</a>
+                </nav>
+            </div>
+            <div class="box">
+                <h2><a href="main.html" style="text-decoration:none">Images</a></h2>
+                <nav>
+                <a class="login" href="login.html">LOGIN</a>
+                </nav>
+            </div>
+            <input class="fixed" type="text" name="search" placeholder="Search..">
+            <a href="main.html" class="main"></a>
+        </header>
+        <form method="post" action="http://10.114.32.124:8080/database/do" enctype="multipart/form-data">
+            <input type="file" name="fileup" accept="image/*">
+            <input type="submit" value="Upload">
+        </form>
+        <form method="post" action="db/service">
+            <input type="text" name="val">
+            <input type="submit">
+        </form>
+        <!--form method="post" action="md/mediaservice">
+            <input type="text" name="name" placeholder="mediadescription">
+            <input type="text" name="userid" placeholder="userid">
+            <input type="text" name="postdate" placeholder="postdate">
+            <input type="text" name="url" placeholder="url">
+            <input type="submit">
+        </form-->
+        
+        <p id="message"></p>
+        <ul id="ul"></ul>
+        
+        <img>
+        <script type="text/javascript" src="js.js"></script>
+    </body>
+</html>

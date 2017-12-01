@@ -1,0 +1,113 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 27-Nov-2017, 12:18:36
+    Author     : TimiL
+*/
+
+body {
+    margin: 0;
+}
+
+
+.top {
+    display: flex;
+    width: 100%;
+    height: 3rem;
+    position:fixed;
+    background-color: #32CD32;
+    box-shadow: 0 3px 3px #999999;
+}
+
+.top h1 {
+    margin: 0;
+    position:fixed;
+    top:0.3rem; left: 0.8rem;
+    font-size: 2rem;
+    font-family: Impact serif;
+    color: #FFFFFF;
+    text-shadow: 3px 1px 3px #999999;
+}
+
+.top nav {
+    margin-left: 23%;
+    margin-right: 40%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+}
+
+.top a {
+    padding: 0 0.5rem;
+    font-size: 1.3rem;
+    font-family: Impact serif;
+    color: #FFFFFF;
+    text-shadow: 3px 1px 3px #999999;
+    text-decoration: none;
+}
+
+.top .search {
+    position:fixed;
+    top: 0.6rem; right: 0.8rem;
+    border-radius: 20px;
+    padding: 5px;
+    align-items: center;
+}
+
+.top .menu {
+    visibility: hidden;
+    position:fixed;
+    top:0.3rem; left: 0.8rem;
+    font-size: 2rem;
+    font-family: Impact serif;
+    color: #FFFFFF;
+    text-shadow: 3px 1px 3px #999999;
+}
+
+ul {
+    margin: 0;
+    width: 90%;
+    padding: 5rem 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+li {
+    display: list-item;
+    padding: 20px 10px;
+    width: 25%;
+}
+
+
+@media screen and (max-width: 35rem){
+    .top a {
+        visibility: hidden;
+    }
+    .top h1 {
+        left: 3.3rem;
+    }
+    .search {
+        width: 30%;
+    }
+    li {
+        width: 80%;
+    }
+    .top .menu {
+        visibility: visible !important;
+    }
+}
+
+
+@media screen and (min-width: 35rem) and (max-width: 60rem) {
+    li {
+        width: 40%;
+    }
+}
