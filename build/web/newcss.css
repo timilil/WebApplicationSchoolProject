@@ -1,0 +1,115 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06-Dec-2017, 20:33:35
+    Author     : TimiL
+*/
+
+.lightbox {
+    width: 60%;
+    background-color: #fff;
+    position: fixed;
+    left: 50%;
+    margin: 0 0 0 -30%;
+    top: 8rem;
+    padding: 1rem;
+    border: 2px solid #32CD32;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 50%;
+}
+
+#close{
+    color: #32CD32;
+    position: absolute;
+    right: 1rem;
+    font-size: 2em;
+    text-decoration: none;
+    
+}
+
+#close:hover {
+    color: #FF0000;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.flexbox {
+    width: 45%;
+    height: 100%;
+}
+
+.flexbox2 {
+    width: 50%;
+    height: 100%;
+}
+
+.flexbox2 img {
+    max-height: 100%;
+}
+
+#commentscroll{
+    overflow: scroll; 
+    height: 55%;
+}
+
+.dimming {
+    display: inline;
+    opacity: 0.2;
+}
+
+#dimmingBackground {
+    display:inherit;
+    flex-wrap: wrap;
+}
+
+@media screen and (max-width: 800px) {
+    .flexbox {
+        width: 45%;
+    }
+    .lightbox{
+        width: 70%;
+        height: 60%;
+        top: 5.5rem;
+        left: 44%;
+    }
+    #commentscroll{
+        height: 50%;
+        max-height: 10rem;
+    }
+}
+
+@media screen and (max-width: 481px) {
+    .flexbox {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .flexbox2 {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+    
+    .lightbox{
+        width: 80%;
+        height: 75%;
+        top: 4rem;
+        left: 35%;
+    }
+    #commentscroll{
+        height: 60%;
+    }
+    
+    .lightbox img{
+        height: 0;
+        visibility: hidden;
+    }
+}

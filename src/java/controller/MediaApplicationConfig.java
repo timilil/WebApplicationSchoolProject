@@ -12,6 +12,8 @@ import javax.ws.rs.core.Application;
  *
  * @author TimiL
  */
+
+
 @javax.ws.rs.ApplicationPath("md")
 public class MediaApplicationConfig extends Application {
 
@@ -29,6 +31,9 @@ public class MediaApplicationConfig extends Application {
      * If required, comment out calling this method in getClasses().
      */
     private void addRestResourceClasses(Set<Class<?>> resources) {
+        
+        
+        resources.add(controller.CommentService.class);
         resources.add(controller.DBSerivce.class);
         resources.add(controller.MediaSerivce.class);
     }

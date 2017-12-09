@@ -9,18 +9,16 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 import javax.ejb.EJB;
-import javax.ws.rs.core.Context;
-import javax.ws.rs.core.UriInfo;
-import javax.ws.rs.Consumes;
+
 import javax.ws.rs.FormParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
-import javax.ws.rs.PUT;
+
 import javax.ws.rs.core.MediaType;
 import model.Media;
-import static model.User_.name;
+
 
 /**
  * REST Web Service
@@ -59,15 +57,15 @@ public class MediaSerivce {
     @POST
     @Produces(MediaType.APPLICATION_JSON)
     public Media post(
-            @FormParam("name") String name,
-            @FormParam("userid") String userid)/*,
+            @FormParam("description") String description,
+            @FormParam("userid") int userid)/*,
             @FormParam("postdate") String postdate,
             @FormParam("url") String url)*/{
         Media m = new Media();
-        String postdate = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        m.setName(name);
+        //String postdate = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        m.setDescription(description);
         m.setUserID(userid);
-        m.setPostDate(postdate);
+       // m.setPostDate(postdate);
         m.setURL(m.getURL());
         return mediac.insert(m);
     }

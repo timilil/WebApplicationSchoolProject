@@ -28,9 +28,9 @@ import javax.xml.bind.annotation.XmlRootElement;
 @NamedQueries({
     @NamedQuery(name = "Media.findAll", query = "SELECT m FROM Media m")
     , @NamedQuery(name = "Media.findById", query = "SELECT m FROM Media m WHERE m.id = :id")
-    , @NamedQuery(name = "Media.findByName", query = "SELECT m FROM Media m WHERE m.name = :name")
+    , @NamedQuery(name = "Media.findByName", query = "SELECT m FROM Media m WHERE m.description = :description")
     , @NamedQuery(name = "Media.findByUserID", query = "SELECT m FROM Media m WHERE m.userid = :userid")
-    , @NamedQuery(name = "Media.findByPostDate", query = "SELECT m FROM Media m WHERE m.postdate = :postdate")
+   /* , @NamedQuery(name = "Media.findByPostDate", query = "SELECT m FROM Media m WHERE m.postdate = :postdate")*/
     , @NamedQuery(name = "Media.findByURL", query = "SELECT m FROM Media m WHERE m.url = :url")})
 
 public class Media implements Serializable {
@@ -40,17 +40,17 @@ public class Media implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Basic(optional = false)
     
-    @Column(name = "ID")
+    @Column(name = "id")
     private int id;
     
-    @Column(name = "name", length = 40)
-    private String name;
+    @Column(name = "description", length = 40)
+    private String description;
     
     @Column(name = "userid")
-    private String userid;
+    private int userid;
     
-    @Column(name = "postdate")
-    private String postdate;
+    /*@Column(name = "postdate")
+    private String postdate;*/
     
     @Column(name = "url")
     private String url;
@@ -70,29 +70,29 @@ public class Media implements Serializable {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getDescription() {
+        return description;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setDescription(String description) {
+        this.description = description;
     }
     
-    public String getUserID() {
+    public int getUserID() {
         return userid;
     }
 
-    public void setUserID(String userid) {
+    public void setUserID(int userid) {
         this.userid = userid;
     }
     
-    public String getPostDate() {
+    /*public String getPostDate() {
         return postdate;
-    }
+    }*/
 
-    public void setPostDate(String postdate) {
+    /*public void setPostDate(String postdate) {
        this.postdate = postdate;
-    }
+    }*/
     
     public String getURL() {
         return url;

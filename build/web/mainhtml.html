@@ -4,34 +4,83 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html> 
-    
-    <head>
-        <meta charset="UTF-8">
-        <link rel="stylesheet" href="css.css">
-        <title>IMAGES</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script type="text/javascript" src="js.js"></script>
-    </head>
-    
-    <body>
-        <header>
-            <div class="top">
-                <h1>
-                    Images
-                </h1>
-                <nav>
-                    <a href="newestpics.html">Newest</a>
-                    <a>Favourites</a>
-                    <a href="uploadhtml.html">Add</a>
-                </nav>
-                <input class="search" type="search" name="search" placeholder="Search">
-                <a class="menu">:</a>
-            </div>
-        </header>
-    
-        <main>
-            
-        </main>
-    </body>
+
+<!DOCTYPE html>
+<html lang="en" id="html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css.css" type="text/css">
+    <link rel="stylesheet" href="newcss.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home</title>
+</head>
+<body>
+<div id="dimmingBackground">
+<header>
+    <div class="top">
+        <nav id="menu" class="menu">
+            <a id="menuclose" title="Close" href="#" class="closeX">&times;</a>
+            <a href="mainhtml.html"><i id="home" class="fa fa-home">&nbsp;&nbsp;Home</i></a>
+            <a href="uploadhtml.html"><i id="add" class="fa fa-plus-circle">&nbsp;&nbsp;Add</i></a>
+            <a href="login.html"><i id="login" class="fa fa-sign-in">&nbsp;&nbsp;Login</i></a>
+            <a href="LogoutServlet"><i id="logout" class="fa fa-sign-out">&nbsp;&nbsp;Logout</i></a>
+        </nav>
+        <span id="menuopen" title="Menu" class="span" >&#9776;</span>
+        <div id="content">
+            <i title="Search" id="searchIcon" class="fa fa-search"></i>
+        </div>
+        <div id="content2">
+            <i title="Profile" id="loggedInIcon" class="fa fa-user"></i>
+        </div>
+        <h1>
+            Images
+        </h1>
+        <nav id="topnav">
+            <a title="Home" href="mainhtml.html"><i class="fa fa-home"></i></a>
+            <a title="Add" href="uploadhtml.html"><i class="fa fa-plus-circle"></i></a>
+            <a title="Login" href="login.html"><i class="fa fa-sign-in"></i></a>
+            <a title="Logout" href="LogoutServlet"><i class="fa fa-sign-out"></i></a>
+        </nav>
+        <nav id="profilenav" class="menu">
+            <h2 id="h2">&nbsp;&nbsp;Logged in as: <br>&nbsp;&nbsp;<span id="loginprofile"></span></h2>
+            <a id="profileclose" title="Close" href="#" class="closeX">&times;</a>
+        </nav>
+        <input id="search" class="search" type="search" placeholder="Search">
+    </div>
+</header>
+
+<main>
+
+    <ul id="ul">
+        
+    </ul>
+    <button class="scroll" id="scroll">&#11145;</button>
+</main>
+</div>
+<div id="modal" class="hidden">
+    <a id="close" href="#" class="closeBtn">&times;</a>
+    <div class="flexbox2">
+        <img>
+    </div>
+    <div class="flexbox">
+        <div>
+            <form method="post" action="CommentServlet">
+                <p>Write a comment</p>
+                <input type="text" name="comment" placeholder="Comment" pattern=".{1,100}">
+                <input type="hidden" name="cid" value="" id="comid">
+                <input type="submit" value="Send" id="up">
+            </form>
+            <span id="login_check"></span>
+        </div>
+        <p>Comments:</p>
+        <div id="commentscroll">
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="js.js"></script>
+<script type="text/javascript" src="checkLogged.js"></script>
+
+</body>
 </html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login</title>
+</head>
+<body>
+<header>
+    <div class="top">
+        <nav id="menu" class="menu">
+            <a id="menuclose" title="Close" href="#" class="closeX">&times;</a>
+            <a href="mainhtml.html"><i id="home" class="fa fa-home">&nbsp;&nbsp;Home</i></a>
+            <a href="uploadhtml.html"><i id="add" class="fa fa-plus-circle">&nbsp;&nbsp;Add</i></a>
+            <a href="login.html"><i id="login" class="fa fa-sign-in">&nbsp;&nbsp;Login</i></a>
+            <a href="LogoutServlet"><i id="logout" class="fa fa-sign-out">&nbsp;&nbsp;Logout</i></a>
+        </nav>
+        <span id="menuopen" title="Menu" class="span" >&#9776;</span>
+        <div id="content">
+            <i title="Search" id="searchIcon" class="fa fa-search" style="visibility: hidden"></i>
+        </div>
+        <div id="content2">
+            <i title="Profile" id="loggedInIcon" class="fa fa-user"></i>
+        </div>
+        <h1>
+            Images
+        </h1>
+        <nav id="topnav">
+            <a title="Home" href="mainhtml.html"><i class="fa fa-home"></i></a>
+            <a title="Add" href="uploadhtml.html"><i class="fa fa-plus-circle"></i></a>
+            <a title="Login" href="login.html"><i class="fa fa-sign-in"></i></a>
+            <a title="Logout" href="LogoutServlet"><i class="fa fa-sign-out"></i></a>
+        </nav>
+        <nav id="profilenav" class="menu">
+            <h2 id="h2">&nbsp;&nbsp;Logged in as: <br>&nbsp;&nbsp;<span id="loginprofile"></span></h2>
+            <a id="profileclose" title="Close" href="#" class="closeX">&times;</a>
+        </nav>
+        <input id="search" class="search" type="search" placeholder="Search">
+    </div>
+</header>
+<main>
+    <form novalidate method="post" action="LoginServlet">
+        <div class="center">
+            <label>Username:<br>
+                <input type="text" name="username" required pattern="^[A-z0-9]{4,20}$"><br>
+            </label>
+            <label>Password:<br>
+                <input type="password" name="password" required pattern="^[A-z0-9]{6,}$"><br>
+            </label>
+
+            <input class="login" type="submit" value="Login" id="loginid">
+            <span id="notification"></span>
+            <p>
+                Do not have an account?
+            </p>
+            <a class="signin" href="signin.html" style="text-decoration:none">Sign in</a>
+        </div>
+    </form>
+<button class="scroll" id="scroll">&#x21EA;</button>
+</main>
+<script type="text/javascript" src="loginCheck.js"></script>
+<script type="text/javascript" src="js.js"></script>
+</body>
+</html>
