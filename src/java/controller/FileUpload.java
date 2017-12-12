@@ -84,8 +84,6 @@ public class FileUpload extends HttpServlet {
             }
             else{  
                 response.setContentType("text/html");
-                out.print("You must login first");  
-                
                 response.sendRedirect("uploadhtml.html");  
             }  
         }

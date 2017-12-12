@@ -10,7 +10,8 @@ and open the template in the editor.
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="css.css" type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>Sign in</title>
+    
+    <title>Error</title>
 </head>
 <body>
 <header>
@@ -26,6 +27,9 @@ and open the template in the editor.
         <div id="content">
             <i title="Search" id="searchIcon" class="fa fa-search" style="visibility: hidden"></i>
         </div>
+        <div id="content2">
+            <i title="Profile" id="loggedInIcon" class="fa fa-user"></i>
+        </div>
         <h1>
             Images
         </h1>
@@ -40,31 +44,15 @@ and open the template in the editor.
             <a id="profileclose" title="Close" href="#" class="closeX">&times;</a>
         </nav>
         <input id="search" class="search" type="search" placeholder="Search">
-        <div id="content2">
-            <i title="Profile" id="loggedInIcon" class="fa fa-user"></i>
-        </div>
     </div>
 </header>
-<main>
-    <form novalidate method="post" action="SigninServlet">
-        <div id="signin" class="center">
-            <label>Email:<br>
-                <input id="email" title="Please use form you@example.com" type="email" name="email" placeholder="you@example.com" required pattern="^[a-z0-9]+[a-z0-9.-][a-z0-9]+[@][a-z0-9]+[.][a-z]{2,3}$"><br>
-            </label>
-            <label>Username:<br>
-                <input id="username" title="Please use only letters and numbers, length min 4 and max 20" type="text" name="username" placeholder="new username" required pattern="^[A-z0-9]{4,20}$">
-            </label>
-            <label>Password:<br>
-                <input id="password" title="Please use only letters and numbers, length min 6" type="password" name="password" placeholder="password" required pattern="^[A-z0-9]{6,}$"><br>
-            </label>
-            <label>Confirm your password:<br>
-                <input id="confirm" title="Please confirm the password" type="password" name="confirm" placeholder="confirm password" required pattern="^[A-z0-9]{6,12}$"><br>
-            </label>
-            <input class="login" type="submit" value="Sign in">
-        </div>
-    </form>
-    <button class="scroll" id="scroll">&#x21EA;</button>
+<main class="center">
+    <div class="error">
+        <h1>Invalid username or password!</h1>
+    </div>
+    <a href="login.html"><i class="fa fa-reply"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Back to Login</a>
 </main>
+<script type="text/javascript" src="checkLogged.js"></script>
 <script type="text/javascript" src="js.js"></script>
 </body>
 </html>

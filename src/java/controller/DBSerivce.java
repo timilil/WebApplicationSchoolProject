@@ -5,8 +5,15 @@
  */
 package controller;
 
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.List;
 import javax.ejb.EJB;
+import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.GET;
@@ -25,7 +32,7 @@ import model.User;
  * @author TimiL
  */
 @Path("service")
-public class DBSerivce {
+public class DBSerivce extends HttpServlet {
 
     
     @EJB
@@ -54,7 +61,7 @@ public class DBSerivce {
         return dbc.getAllComments();
     }
     
-    @POST
+    /*@POST
     @Produces(MediaType.APPLICATION_JSON)
     public User post(
             @FormParam("username") String name,
@@ -72,15 +79,17 @@ public class DBSerivce {
                     u.setEmail(email);
                     u.setPassword(password);
                     return dbc.insert(u);
+                    
                 }
             }
             
-            dbc.checkUsername(loginusername, loginpassword);
+            //dbc.checkUsername(loginusername, loginpassword);
         }
         catch (Exception e){
         }
         return null;
-    }
+    }*/
+    
 }
     
     

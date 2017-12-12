@@ -31,7 +31,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     , @NamedQuery(name = "Comment.findById", query = "SELECT c FROM Comment c WHERE c.id = :id")
     , @NamedQuery(name = "Comment.findMediaID", query = "SELECT c FROM Comment c WHERE c.mediaid = :mediaid")
     , @NamedQuery(name = "Comment.findUserID", query = "SELECT c.comment FROM Comment c WHERE c.userid = :userid")
-                                                               /*select c.id from Cars c join CarStatus d where c.status = d.status and d.color = 'red'*/
+                                                               
     })
 public class Comment implements Serializable {
 
@@ -87,8 +87,6 @@ public class Comment implements Serializable {
     public Integer getUserId (){
         return userid;
     }
-    
-    
     
     @Override
     public int hashCode() {

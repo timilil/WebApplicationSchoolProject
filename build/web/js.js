@@ -81,7 +81,6 @@ const getAllImages = () => {
                           <figure>
                             <p>${obj.description}</p>
                             <a href="${obj.URL}" data-cid="${obj.id}"><img src="${obj.URL}"></a>
-                            <button id="btn"><i class="fa fa-thumbs-o-up"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span>0</span></button>
                           </figure>
                         </li>`;
                 });
@@ -189,7 +188,7 @@ if (document.querySelector('title').innerHTML === "Sign in"){
     });
 }
 
-if (document.querySelector('title').innerHTML === "Log in"){
+if (document.querySelector('title').innerHTML === "Login"){
     form.addEventListener('submit', (evt) => {
         evt.preventDefault();
         formOK = 0;

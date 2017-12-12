@@ -16,6 +16,14 @@
         <servlet-name>CommentServlet</servlet-name>
         <servlet-class>controller.CommentServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteImgServlet</servlet-name>
+        <servlet-class>controller.DeleteImgServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>SigninServlet</servlet-name>
+        <servlet-class>controller.SigninServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>LoginServlet</servlet-name>
         <url-pattern>/LoginServlet</url-pattern>
@@ -31,6 +39,14 @@
     <servlet-mapping>
         <servlet-name>CommentServlet</servlet-name>
         <url-pattern>/CommentServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteImgServlet</servlet-name>
+        <url-pattern>/DeleteImgServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>SigninServlet</servlet-name>
+        <url-pattern>/SigninServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

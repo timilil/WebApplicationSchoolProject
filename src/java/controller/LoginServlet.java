@@ -8,6 +8,7 @@ package controller;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.ejb.EJB;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -44,9 +45,9 @@ public class LoginServlet extends HttpServlet {
         else{  
             //out.print("Invalid username or password, try again!");  
             //request.getRequestDispatcher("login.html").include(request, response);  
-            response.sendRedirect("login.html");
+            //response.sendError(HttpServletResponse.SC_BAD_REQUEST, "Invalid username or password, try again.");
+            response.sendRedirect("logInError.html");
         }  
-          
         //out.close();  
     }
     

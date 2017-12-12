@@ -208,7 +208,6 @@ body {
 }
 
 
-
 ul {
     margin: 0;
     padding: 5rem 0;
@@ -222,9 +221,11 @@ ul {
 li {
     display: list-item;
     padding: 20px 10px;
-    width: 25%;
+    width: 30%;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    height: 14rem;
 }
-
 
 @media screen and (max-width: 481px){
     .top a {
@@ -246,8 +247,12 @@ li {
         width: 30%;
     }
     li {
-        width: 80%;
+        width: 100%;
+        overflow-y: visible;
+        overflow-x: visible;
+        height: 100%;
     }
+    
     .menu {
         visibility: visible !important;
     }
@@ -262,8 +267,9 @@ li {
 
 @media screen and (min-width: 481px) and (max-width: 800px) {
     li {
-        width: 30%;
+        width: 40%;
     }
+    
     .search {
         width: 8rem;
     }
@@ -297,7 +303,6 @@ li {
 
 img {
     max-width: 100%;
-    max-height: 30rem;
 }
 
 h2 {
@@ -332,4 +337,8 @@ h2 {
 
 #profilenav .closeX:hover {
     color: #FF0000;
+}
+
+.error {
+    font-size: 0.6rem;
 }

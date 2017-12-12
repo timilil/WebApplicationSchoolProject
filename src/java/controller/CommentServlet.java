@@ -79,7 +79,6 @@ public class CommentServlet extends HttpServlet {
             response.sendRedirect("mainhtml.html");
         }
         else{
-            out.print("You must login first");
             response.sendRedirect("uploadhtml.html");
         }
         }
