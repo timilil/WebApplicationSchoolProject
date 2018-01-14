@@ -44,9 +44,9 @@ public class CommentServlet extends HttpServlet {
                 response.setContentType("application/json");
   
                 PrintWriter out = response.getWriter();
-
                 out.print(json);
                 out.flush();
+                
             }
             else {
                 response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
